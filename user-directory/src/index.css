@@ -1,0 +1,14 @@
+body {
+  background-color: rgba(34,34,34,255);
+  color: white;
+}
+
+
+.topPart {
+  background-color: rgba(52,165,218,255);
+  color: rgba(34,34,34,255);
+}
+
+.bottomPart {
+  display: flex;
+}
