@@ -9,7 +9,7 @@ class App extends Component {
   
   render() {
     return (
-      <div>
+      <div id = "main">
         <Top />
         <div className = "content">
           <Slides />

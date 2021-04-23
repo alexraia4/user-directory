@@ -4,7 +4,7 @@ export default class Slides extends Component {
 
     render () {
         return (
-            <div>
+            <div className = "middlePart">
                 <p> slide portion </p>
             </div> 
         )
