@@ -5,7 +5,7 @@ export default class Bottom extends Component {
     render () {
         return (
             <div className = "bottomPart">
-                <button>Previous</button>
+                <button onClick = {this.props.goDown}>Previous</button>
                 <div className = "middleButtons">
                     <button>Edit</button>
                     <button>Delete</button>
