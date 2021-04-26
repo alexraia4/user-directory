@@ -11,7 +11,7 @@ export default class Bottom extends Component {
                     <button>Delete</button>
                     <button>New</button>
                 </div>
-                <button>Next</button>
+                <button onClick = {this.props.goUp}>Next</button>
             </div> 
         )
     }

@@ -3,18 +3,28 @@ import './index.css';
 import { Component } from 'react';
 import Top from './components/Top.js'
 import Slides from './components/Slides.js';
-import Bottom from './components/Bottom.js';
+
+import data from './data';
 
 class App extends Component {
   
+  constructor() {
+    super();
+
+    this.state = {
+      peopleArr: data
+    }
+  }
+
+
   render() {
+
+    //console.log(this.state.peopleArr);
+
     return (
       <div id = "main">
         <Top />
-        <div className = "content">
-          <Slides />
-          <Bottom />
-        </div>
+        <Slides peopleArr = {this.state.peopleArr}/>
       </div>
     );
   }
