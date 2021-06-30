@@ -16,7 +16,6 @@ export default class Slides extends Component {
 
 
     goUp() {
-        console.log(this.state.numberWeAt);
         let num = this.state.numberWeAt + 1;
         if (num === this.props.peopleArr.length) {
             num = 0;
@@ -25,7 +24,6 @@ export default class Slides extends Component {
     }
 
     goDown() {
-        console.log(this.state.numberWeAt);
         let num = this.state.numberWeAt - 1;
         if (num === -1) {
             num = this.props.peopleArr.length - 1;
@@ -34,6 +32,13 @@ export default class Slides extends Component {
     }
 
     render () {
+
+        let moviesMarkup = (<p></p>);
+
+        if (this.props.peopleArr[this.state.numberWeAt].favoriteMovies) {
+            moviesMarkup = this.props.peopleArr[this.state.numberWeAt].favoriteMovies.map( movie => (<p>{movie}</p>));
+        }
+        
 
         return (
             <div className = "content">
@@ -45,7 +50,7 @@ export default class Slides extends Component {
                         <h3>Job Title: {this.props.peopleArr[this.state.numberWeAt].title}</h3>
                         <h3>Employer: {this.props.peopleArr[this.state.numberWeAt].employer}</h3>
                         <br/>
-                        <h3>Favorite Movies: </h3>
+                        <h3>Favorite Movies: {moviesMarkup}</h3>
                     </div>
                 </div> 
                 <Bottom goUp = {this.goUp} goDown = {this.goDown}/>

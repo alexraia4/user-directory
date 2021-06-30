@@ -19,7 +19,7 @@ class App extends Component {
 
   render() {
 
-    //console.log(this.state.peopleArr);
+    console.log(this.state.peopleArr);
 
     return (
       <div id = "main">
